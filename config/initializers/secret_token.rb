@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-HeavensHealthy::Application.config.secret_key_base = '648c9aa80218f83aff3287ef093ac3406d0aba552dd379eb55a4603f414f9d0f7c17af1e183014d237fde9f1a59b9546b58e90447201a0e97596ed41a3417282'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+HeavensHealthy::Application.config.secret_key_base = secure_token
