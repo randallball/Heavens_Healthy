@@ -1,4 +1,10 @@
 HeavensHealthy::Application.routes.draw do
+  get "health/home"
+  get "health/about"
+  get "health/mental"
+  get "health/physical"
+  get "health/love"
+  get "health/forgive"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
