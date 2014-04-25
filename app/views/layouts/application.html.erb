@@ -11,25 +11,10 @@
     <![endif]-->
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container" id="bright">
-          <%= link_to image_tag("tempLogo.png", alt: "Rails"), '/' %>
-          <nav class="navbar navbar-default">
-            <ul class="nav nav-justified navbar-nav" id="bright">
-              <li class="libutton" id="leftli"><%= link_to "Home",    '#' %></li>
-              <li class="libutton"><%= link_to "My Story",    '#' %></li>
-              <li class="libutton"><%= link_to "Mental", '#' %></li> 
-              <Li class="libutton"><%= link_to "Physical", '#' %></Li>
-              <Li class="libutton"><%= link_to "Love Yourself", '#' %></Li>
-              <Li class="libutton" id="rightli"><%= link_to "Forgive", '#' %></Li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+      <%= render "layouts/header" %>
     <div class="container">
       <%= yield %>
     </div>
+      <%= render "layouts/footer" %>
   </body>
 </html>

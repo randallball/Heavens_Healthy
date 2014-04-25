@@ -1,10 +1,12 @@
 HeavensHealthy::Application.routes.draw do
-  get "health/home"
-  get "health/about"
-  get "health/mental"
-  get "health/physical"
-  get "health/love"
-  get "health/forgive"
+  get "users/new"
+  match "/home", to: "health#home", via: "get"
+  match "/about", to: "health#about", via: "get"
+  match "/mental", to: "health#mental", via:"get"
+  match "/physical", to: "health#physical", via: "get"
+  match "/love", to: "health#love", via: "get"
+  match "/forgive", to: "health#forgive", via: "get"
+  match "/signup", to: "users#new", via: "get"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
