@@ -1,0 +1,17 @@
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container" id="bright">
+          <%= link_to image_tag("tempLogo.png", :class=>"logo", alt: "Rails"), '/' %>
+          <nav class="navbar navbar-default navbar-inverse">
+            <ul class="nav nav-justified nav-tabs" id="bright">
+              <li><%= link_to "Home", '/' %></li>
+              <li><%= link_to "My Story", about_path %></li>
+              <li><%= link_to "Mental", mental_path %></li> 
+              <Li><%= link_to "Physical", physical_path %></Li>
+              <Li><%= link_to "Love Yourself", love_path %></Li>
+              <Li><%= link_to "Forgive", forgive_path %></Li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
